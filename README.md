@@ -2,7 +2,7 @@
 Script to import an SSL certificate into a running opnsense system.
 The webgui will be restarted. The last certifcate in the webgui will be overwritten.
 
-## usage
+## Usage
 
 ### Preconditions
 Since the last certifcate will be overwritten:
@@ -20,9 +20,9 @@ Since the last certifcate will be overwritten:
 php opnsense-import-certificate.php /path/to/certificate.crt /path/to/private/key.pem
 ```
 
-## automation example with acme.sh
+## Automation example with acme.sh
 
-Create a renew hook
+Create a renew hook:
 ```
 acme.sh --renew --dns dns_provider -d first.dom.ain -d '*.first.dom.ain' --renew-hook "php opnsense-import-certificate.php /path/to/certificate.crt /path/to/private/key.pem"
 ```
